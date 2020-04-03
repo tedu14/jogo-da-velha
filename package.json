@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "electron": "^8.2.0",
+    "electron-is-dev": "^1.1.0",
+    "electron-reload": "^1.5.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon --exec electron src/main.js"
+  }
+}
