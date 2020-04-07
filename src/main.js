@@ -6,7 +6,7 @@ require('electron-reload');
 const createWindow = () => {
     let win = new BrowserWindow({
         width: 400,
-        height: 420,
+        height: 430,
         webPreferences: {
             nodeIntegration: true,
         }

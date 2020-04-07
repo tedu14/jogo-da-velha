@@ -10,6 +10,15 @@
             }
         },
 
+        score: {
+            player_one: 0,
+            player_two: 0,
+            reset: function () {
+                this.player_one = 0;
+                this.player_two = 0;
+            }
+        },
+
         gameover: false,
 
         container_element: null,
@@ -89,18 +98,31 @@
 
         write: function () {
             let btn = doc.querySelector('.button');
+            let reset = doc.querySelector('.reset');
+            let p1 = doc.querySelector('.p1');
+            let p2 = doc.querySelector('.p2');
 
             btn.innerHTML = "Start";
+            reset.innerHTML = "Reset"
+            p1.innerHTML = this.score.player_one;
+            p2.innerHTML = this.score.player_two;
 
             btn.addEventListener('click', () => {
                 this.start();
+            });
+
+            reset.addEventListener('click', () => {
+                this.start();
+                this.score.reset();
             })
         },
 
         messages: function (player) {
             if (player === 0) {
+                this.score.player_one += 1;
                 alert('Jogador 1, ganhou!');
             } else {
+                this.score.player_two += 1;
                 alert('Jogador 2, ganhou!');
             }
         },

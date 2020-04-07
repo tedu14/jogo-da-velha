@@ -6,11 +6,46 @@ html, body {
     padding: 0;
     margin: 0;
     display: block;
+    background-color: #ccc;
 }
 
-.button {
+.score {
     position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     margin: 0 auto;
+    background-color: #080850;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.score>.p1, .p2 {
+    border: 1px solid #fff;
+    margin: 0 auto;
+    height: 19px;
+    width: 20px;
+    padding: 2px;
+    color: #ff0;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button, .reset {
+    position: relative;
+    margin: 5px auto;
     padding: 5px 10px;
     background-color: #080850;
     color: #fff;
@@ -18,13 +53,20 @@ html, body {
     text-transform: uppercase;
     display: flex;
     align-self: center;
+    border: 1px solid #262626;
+}
+
+.button:hover, .reset:hover {
+    color: #ff0;
+    background-color: #080840;
+    box-shadow: 2px 2px 5px #333333;
 }
 
 .game {
     max-width: 500px;
     width: 80%;
     height: 300px;
-    margin: 5px auto;
+    margin: 0 auto;
     background-color: #080850;
     color: #fff;
     border: 1px solid #262626;
